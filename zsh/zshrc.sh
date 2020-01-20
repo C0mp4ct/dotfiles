@@ -1,7 +1,6 @@
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000
-	LC_ALL=en_US.UTF-8
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
 
@@ -93,6 +92,8 @@ fi
 source ~/dotfiles/zsh/prompt.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+
+export LC_ALL=en_US.UTF-8
 export PATH=$PATH:$HOME/dotfiles/utils
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
