@@ -99,5 +99,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export GOPRIVATE=gitlab.i.etech.sk/*
 export GOPATH="$HOME/go"
