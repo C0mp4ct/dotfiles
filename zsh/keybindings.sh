@@ -23,13 +23,6 @@
 	zle -N git_prepare
 	bindkey "^g" git_prepare
 
-# Edit and rerun
-	function edit_and_run() {
-		BUFFER="fc"
-		zle accept-line
-	}
-	zle -N edit_and_run
-	bindkey "^v" edit_and_run
 
 # Enter
 	function enter_line() {

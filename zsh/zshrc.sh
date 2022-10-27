@@ -100,5 +100,5 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export GOPRIVATE=gitlab.i.etech.sk/*
+export GOPRIVATE=gitlab.rassk.work/*
 export GOPATH="$HOME/go"
