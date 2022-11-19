@@ -8,7 +8,7 @@
 # Aliases
 	alias v="vim -p"
 	alias deploy='ssh urban@10.0.0.112'
-	alias alfa='ssh urban@172.17.0.121'
+	alias alfa='ssh urban@172.17.0.124'
 	alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 	# alias ls='ls -GFhl'
 	alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -18,7 +18,8 @@
 	alias less='less -FSRXc'                    # Preferred 'less' implementation
 	alias path='echo -e ${PATH//:/\\n}'
 	alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-
+	alias tunel='ssh -L 9003:10.10.4.72:3306 urban@10.0.0.112 -N'
+	alias tunels='ssh -L 9006:10.10.40.72:3306 urban@10.0.0.112 -N'
 	mkdir -p /tmp/log
 	
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
@@ -55,7 +56,7 @@ chpwd() ls
 # Edit the array below, or relocate it to ~/.zshrc before anything is sourced
 # For help create an issue at github.com/parth/dotfiles
 
-autoload -U compinit
+#autoload -U compinit
 
 plugins=(
 	docker
@@ -65,29 +66,27 @@ for plugin ($plugins); do
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
-compinit
-
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
+#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
+#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
+#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
 source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
-source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/keybindings.sh
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-	autoload -U up-line-or-beginning-search
-	zle -N up-line-or-beginning-search
-	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
+#if [[ "${terminfo[kcuu1]}" != "" ]]; then
+#	autoload -U up-line-or-beginning-search
+#	zle -N up-line-or-beginning-search
+#	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+#fi
 # start typing + [Down-Arrow] - fuzzy find history backward
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-	autoload -U down-line-or-beginning-search
-	zle -N down-line-or-beginning-search
-	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
+#if [[ "${terminfo[kcud1]}" != "" ]]; then
+#	autoload -U down-line-or-beginning-search
+#	zle -N down-line-or-beginning-search
+#	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+#fi
 
 source ~/dotfiles/zsh/prompt.sh
 
@@ -102,3 +101,4 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export GOPRIVATE=gitlab.rassk.work/*
 export GOPATH="$HOME/go"
+export SYNC_UNISON_DEFAULTS="-perms=0 -auto -numericids -batch -maxerrors 10 -repeat watch"
