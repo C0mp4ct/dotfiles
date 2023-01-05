@@ -134,7 +134,7 @@
 [user]
   name = Denis Urban
   email = denis.urban@ringieraxelspringer.sk
-  signingkey = 15BE24DC3589E058
+  signingkey = B0CC004FF7C8C158
 [gpg]
   program = /usr/local/bin/gpg
 [commit]
@@ -145,5 +145,7 @@
   path = /usr/local/bin/sublimemerge
 [mergetool "sublimemerge"]
   path = /usri/local/bin/sublimemerge
-[url "git@gitlab.rassk.work:"]
+[url "ssh://git@gitlab.rassk.work"]
   insteadOf = https://gitlab.rassk.work
+[url "ssh://git@gitlab.rassk.work"]
+  insteadOf = gitlab.rassk.work
