@@ -20,6 +20,7 @@
 	alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 	alias tunel='ssh -L 9003:10.10.4.72:3306 urban@10.0.0.112 -N'
 	alias tunels='ssh -L 9006:10.10.40.72:3306 urban@10.0.0.112 -N'
+	alias tunell='ssh -L 9006:10.10.50.13:3307 urban@10.0.0.112 -N'
 	mkdir -p /tmp/log
 	
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
