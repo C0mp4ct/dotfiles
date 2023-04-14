@@ -113,7 +113,7 @@
 [push]
   # 'git push' will push the current branch to its tracking branch
   # the usual default is to push all branches
-  default = current
+	default = current
 [core]
   autocrlf = input
   editor = vim
@@ -145,7 +145,7 @@
   path = /usr/local/bin/sublimemerge
 [mergetool "sublimemerge"]
   path = /usri/local/bin/sublimemerge
-[url "ssh://git@gitlab.rassk.work"]
-  insteadOf = https://gitlab.rassk.work
-[url "ssh://git@gitlab.rassk.work"]
+[url "git@gitlab.rassk.work:"]
+  insteadOf = https://gitlab.rassk.work/
+[url "git@gitlab.rassk.work:"]
   insteadOf = gitlab.rassk.work
