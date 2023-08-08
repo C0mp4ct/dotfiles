@@ -1,7 +1,5 @@
 # Vars
-	HISTFILE=~/.zsh_history
-	SAVEHIST=1000
-	setopt inc_append_history # To save every command before it is executed 
+	setopt inc_append_history # To save every command before it is executed
 	setopt share_history # setopt inc_append_history
 
 	git config --global push.default current
@@ -66,11 +64,11 @@ for plugin ($plugins); do
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
-#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
-#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
-#source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
 source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
-source ~/dotfiles/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/keybindings.sh
 
@@ -92,7 +90,6 @@ source ~/dotfiles/zsh/prompt.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
-export LC_ALL=en_US.UTF-8
 export PATH=$PATH:$HOME/dotfiles/utils
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"

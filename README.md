@@ -95,3 +95,9 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 - Use vim movement keys for moving between panes.
 - Copy buffer is copied to xclip.
 - Status bar tells you date, time, user, and hostname. Especially useful with nested ssh sessions.
+
+## Troubleshooting
+To fix LC_ALL warning:
+```shell
+sudo dpkg-reconfigure locales
+```
