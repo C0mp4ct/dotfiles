@@ -89,6 +89,9 @@ source ~/dotfiles/zsh/keybindings.sh
 #	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 #fi
 
+bindkey '^P' up-line-or-search
+bindkey '^N' down-line-or-search
+
 source ~/dotfiles/zsh/prompt.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"

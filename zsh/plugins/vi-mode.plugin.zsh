@@ -14,6 +14,7 @@ zle -N edit-command-line
 
 
 bindkey -v
+export KEYTIMEOUT=1
 
 # allow v to edit the command line (standard behaviour)
 autoload -Uz edit-command-line
